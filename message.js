@@ -1,0 +1,2 @@
+exports.WelcomeMessage='Hello Mario';
+
