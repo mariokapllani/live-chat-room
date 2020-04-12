@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-    const connectionString='mongodb+srv://keke:keketest@kekedb-lg5ec.mongodb.net/test?retryWrites=true&w=majority';
+    const connectionString='mongodb+srv://mario:mariotest@chatclaster-fuewq.mongodb.net/chatbot?retryWrites=true&w=majority';
     const mongoose = require('mongoose')
     const userSchema = require('./userSchema.js')
     const User = mongoose.model('user', userSchema, 'user')
