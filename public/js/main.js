@@ -2,11 +2,11 @@ const chatform=document.getElementById('chat-form');
 const chatMessages=document.querySelector('.chat-messages');
 
 //Get ussername and room from url
-const { username, room }=Qs.parse(location.search, {
+const {username, room}=Qs.parse(location.search, {
     igroneQueryPrefix:true
 });
-
-const socket=io()
+console.log(username,room)
+const socket=io();
 //Join chat
 socket.emit('joinRoom', {username, room});
 

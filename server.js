@@ -25,7 +25,7 @@ io.on('connection', socket=>{
         socket.emit('message', formatMessage(botName, 'Welcome to ChatBot Room'));
 
         //Broadcast when user connects
-        socket.broadcast.emit('message',formatMessage(botName, 'A user has joined the chat'));
+        socket.broadcast.to(user.room).emit('message',formatMessage(botName, `${user.username} has joined the chat`));
     });
  
     //Listen for chatMessage
