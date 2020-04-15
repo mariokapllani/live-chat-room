@@ -17,7 +17,7 @@ const botName="Admin";
 //Run when client connects
 io.on('connection', socket=>{
     socket.on('joinRoom',({username,room})=>{
-
+        
         const user=userJoin(socket.id,username,room);
 
         socket.join(user.room);
@@ -30,7 +30,7 @@ io.on('connection', socket=>{
  
     //Listen for chatMessage
     socket.on('chatMessage', (msg)=>{
-        io.emit('message', formatMessage('User', msg));
+        io.emit('message', formatMessage('user', msg));
     });
 
     //Runs when client dissconnects

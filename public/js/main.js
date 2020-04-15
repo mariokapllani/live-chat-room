@@ -2,8 +2,6 @@ const chatform=document.getElementById('chat-form');
 const chatMessages=document.querySelector('.chat-messages');
 
 //Get ussername and room from url
-const pared=queryString.parse(location.search);
-console.log(parsed);
 const {username, room}=Qs.parse(location.search, {
     ignoreQueryPrefix:true
 });
@@ -22,7 +20,6 @@ socket.on('message', message=>{
 });
 
 //message submit event
-
 chatform.addEventListener('submit', (e)=>{
     e.preventDefault();
 
