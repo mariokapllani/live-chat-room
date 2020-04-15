@@ -12,7 +12,7 @@ const {userJoin,getCurrentUser}=require('./utils/users');
 //Set static folder 
 app.use(express.static(path.join(__dirname,'public')));
 app.get('/', function(req, res){
-    res.redirect('./public/index.html');
+    res.redirect('/');
  });
 const botName="Admin";
 
