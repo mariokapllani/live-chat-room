@@ -4,14 +4,16 @@ const express = require('express');
 const socketio=require('socket.io');
 
 const app=express();
-const server=http.createServer(app);
+const server=http.createServer(app); 
 const io=socketio(server);
 const formatMessage=require('./utils/messages');
 const {userJoin,getCurrentUser}=require('./utils/users');
 
 //Set static folder 
 app.use(express.static(path.join(__dirname,'public')));
-
+app.get('/', function(req, res){
+    res.redirect('./public/index.html');
+ });
 const botName="Admin";
 
 //Run when client connects
